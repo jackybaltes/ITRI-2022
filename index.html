@@ -1,0 +1,2552 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+        <title>ITRI 2022</title>
+
+        <link rel="stylesheet" href="css/reveal.css">
+        <link rel="stylesheet" href="css/theme/ntnuerc.css">
+
+        <!-- Theme used for syntax highlighting of code -->
+        <link rel="stylesheet" href="lib/css/zenburn.css">
+        <script src="https://daybrush.com/scenejs/release/latest/dist/scene.min.js"></script>
+		
+        <!-- Printing and PDF exports -->
+        <script>
+            var link = document.createElement( 'link' );
+            link.rel = 'stylesheet';
+            link.type = 'text/css';
+            link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+            document.getElementsByTagName( 'head' )[0].appendChild( link );
+        </script>
+        <script src="js/ntnu.js"></script>
+    </head>
+    <body>
+        <div class="reveal">
+        <div class="slides">
+            
+<section id="start" data-state="start">
+
+
+<!-- Header -->
+  
+
+<!-- Background -->
+
+
+<!-- Slide -->
+<div class="jb-slide">
+
+<div class="jb-output-code jb-render">
+
+<!-- start embedded style -->
+
+<!-- end embedded style -->
+<div class="jb-output jb-render">
+
+<h1>ITRI 2022</h1>
+
+<p>
+      Jacky Baltes<br>
+      National Taiwan Normal University<br>
+      Taipei, Taiwan<br>
+      <a href="mailto:jacky.baltes@ntnu.edu.tw">jacky.baltes@ntnu.edu.tw</a><br>
+      23 December 2022
+</p>
+
+<class 'datetime.date'>
+
+</div><!-- end of jb-output jb-render -->
+</div><!-- end of jb-output-code jb-render -->
+
+
+</div>
+<!-- Footer -->
+
+<div class="jb-footer-left">
+    <span id="id-e04b4720-01bf-46fa-9023-c2463f2ea8e2" ><span id="id-e04b4720-01bf-46fa-9023-c2463f2ea8e2"><img id="img-id-e04b4720-01bf-46fa-9023-c2463f2ea8e2"     src="assets/images/logo.png"/></span>
+</span>
+
+</div>
+<div class="jb-footer-right">
+    <span id="id-99941a83-32c0-4e89-866d-8b1e60593f8d" ><span id="id-99941a83-32c0-4e89-866d-8b1e60593f8d"><img id="img-id-99941a83-32c0-4e89-866d-8b1e60593f8d" width="162" height="138"   src="assets/images/robbi.png"/></span>
+</span>
+
+</div>
+
+<aside class="notes">
+
+</aside>
+
+
+
+</section>
+<section id="slide_00003_frag_00001" data-state="slide_00003_frag_00001">
+
+
+<!-- Header -->
+  
+
+<!-- Background -->
+
+
+<!-- Slide -->
+<div class="jb-slide">
+
+<div class="jb-output-code jb-render">
+
+<!-- start embedded style -->
+
+<!-- end embedded style -->
+<div class="jb-output jb-render">
+
+<h2>
+Kid Size Robot: Liquid Motion
+</h2>
+
+<table>
+  <tr>
+    <td style="width:20%">
+      <span id="id-21a8403d-82ba-4732-b685-c7fa0f3a583d" ><span id="id-21a8403d-82ba-4732-b685-c7fa0f3a583d"><img id="img-id-21a8403d-82ba-4732-b685-c7fa0f3a583d"     src="assets/images/darwinOP2img.png"/></span>
+</span>
+
+    </td>
+    <td style="width:55%">
+      
+
+<table style="text-align: left; width: 100%; font-size:0.4em" border="1" cellpadding="2"
+cellspacing="2"; border-color: #aaaaaa>
+<!-- Table heading row -->
+
+<tbody>
+<!-- Table body -->
+
+<tr>
+
+<td style="vertical-align: top;">
+Competition
+</td>
+
+<td style="vertical-align: top;">
+FIRA, IROS
+</td>
+
+</tr>
+
+<tr>
+
+<td style="vertical-align: top;">
+Height
+</td>
+
+<td style="vertical-align: top;">
+45.5cm
+</td>
+
+</tr>
+
+<tr>
+
+<td style="vertical-align: top;">
+Weight
+</td>
+
+<td style="vertical-align: top;">
+3.0kg
+</td>
+
+</tr>
+
+<tr>
+
+<td style="vertical-align: top;">
+Degrees of Freedom
+</td>
+
+<td style="vertical-align: top;">
+22
+</td>
+
+</tr>
+
+<tr>
+
+<td style="vertical-align: top;">
+Motion Controller
+</td>
+
+<td style="vertical-align: top;">
+CM-730 (ARM Cortex-M3)
+</td>
+
+</tr>
+
+<tr>
+
+<td style="vertical-align: top;">
+Main Controller
+</td>
+
+<td style="vertical-align: top;">
+Fit PC (Intel Atom N2600)
+</td>
+
+</tr>
+
+<tr>
+
+<td style="vertical-align: top;">
+Actuators
+</td>
+
+<td style="vertical-align: top;">
+Robotis MX-28
+</td>
+
+</tr>
+
+<tr>
+
+<td style="vertical-align: top;">
+Sensors
+</td>
+
+<td style="vertical-align: top;">
+Webcam, IMU
+</td>
+
+</tr>
+
+<tr>
+
+<td style="vertical-align: top;">
+Walking Speed
+</td>
+
+<td style="vertical-align: top;">
+24 cm/sec.
+</td>
+
+</tr>
+
+<tr>
+
+<td style="vertical-align: top;">
+Motions
+</td>
+
+<td style="vertical-align: top;">
+Forward and inverse kinematics, parameterized omni-directional walk engine
+</td>
+
+</tr>
+
+<tr>
+
+<td style="vertical-align: top;">
+Human Robot Interaction
+</td>
+
+<td style="vertical-align: top;">
+Voice recognition, TTS, MP3
+</td>
+
+</tr>
+
+</tbody>
+</table>
+
+    </td>
+  </tr>
+</table>
+
+<h3>Awards</h3>
+<div style="text-align:left">
+FIRA 2019 HuroCup Kid AR <span class="jb-highlight">2nd Place</span>
+</div>
+
+</div><!-- end of jb-output jb-render -->
+</div><!-- end of jb-output-code jb-render -->
+
+
+</div>
+<!-- Footer -->
+
+<div class="jb-footer-left">
+    <span id="id-eca5115d-311d-433a-b537-8508e032c63c" ><span id="id-eca5115d-311d-433a-b537-8508e032c63c"><img id="img-id-eca5115d-311d-433a-b537-8508e032c63c"     src="assets/images/logo.png"/></span>
+</span>
+
+</div>
+<div class="jb-footer-right">
+    <span id="id-38758b47-c8a7-4f7c-9623-524f05077dac" ><span id="id-38758b47-c8a7-4f7c-9623-524f05077dac"><img id="img-id-38758b47-c8a7-4f7c-9623-524f05077dac" width="162" height="138"   src="assets/images/robbi.png"/></span>
+</span>
+
+</div>
+
+<aside class="notes">
+
+</aside>
+
+
+
+</section>
+<section id="slide_00004_frag_00001" data-state="slide_00004_frag_00001">
+
+
+<!-- Header -->
+  
+
+<!-- Background -->
+
+
+<!-- Slide -->
+<div class="jb-slide">
+
+<div class="jb-output-code jb-render">
+
+<!-- start embedded style -->
+
+<!-- end embedded style -->
+<div class="jb-output jb-render">
+
+<h2>
+Teen Sized Robot: ZSTT-NTNU
+</h2>
+
+<table>
+  <tr>
+    <td style="width:20%">
+      <span id="id-c74ef1e8-d7e6-4a1a-a058-adbd1e53d717" ><span id="id-c74ef1e8-d7e6-4a1a-a058-adbd1e53d717"><img id="img-id-c74ef1e8-d7e6-4a1a-a058-adbd1e53d717"     src="assets/images/Robinionimg.png"/></span>
+</span>
+
+    </td>
+    <td style="width:55%">
+      
+
+<table style="text-align: left; width: 100%; font-size:0.4em" border="1" cellpadding="2"
+cellspacing="2"; border-color: #aaaaaa>
+<!-- Table heading row -->
+
+<tbody>
+<!-- Table body -->
+
+<tr>
+
+<td style="vertical-align: top;">
+Competition
+</td>
+
+<td style="vertical-align: top;">
+FIRA, IROS, RoboCup
+</td>
+
+</tr>
+
+<tr>
+
+<td style="vertical-align: top;">
+Height
+</td>
+
+<td style="vertical-align: top;">
+85cm
+</td>
+
+</tr>
+
+<tr>
+
+<td style="vertical-align: top;">
+Weight
+</td>
+
+<td style="vertical-align: top;">
+7.5kg
+</td>
+
+</tr>
+
+<tr>
+
+<td style="vertical-align: top;">
+Degrees of Freedom
+</td>
+
+<td style="vertical-align: top;">
+26
+</td>
+
+</tr>
+
+<tr>
+
+<td style="vertical-align: top;">
+Motion Controller
+</td>
+
+<td style="vertical-align: top;">
+OpenCM 9.04 (Arm Cortex-M3)
+</td>
+
+</tr>
+
+<tr>
+
+<td style="vertical-align: top;">
+Main Controller
+</td>
+
+<td style="vertical-align: top;">
+Lattepanda (Intel Atom Z8300)
+</td>
+
+</tr>
+
+<tr>
+
+<td style="vertical-align: top;">
+Actuators
+</td>
+
+<td style="vertical-align: top;">
+Robotis MX-106, MX-64
+</td>
+
+</tr>
+
+<tr>
+
+<td style="vertical-align: top;">
+Sensors
+</td>
+
+<td style="vertical-align: top;">
+Webcam, IMU, DMS
+</td>
+
+</tr>
+
+<tr>
+
+<td style="vertical-align: top;">
+Walking Speed
+</td>
+
+<td style="vertical-align: top;">
+30 cm/sec.
+</td>
+
+</tr>
+
+<tr>
+
+<td style="vertical-align: top;">
+Motions
+</td>
+
+<td style="vertical-align: top;">
+Forward and inverse kinematics, parameterized omni-directional walk engine
+</td>
+
+</tr>
+
+<tr>
+
+<td style="vertical-align: top;">
+Human Robot Interaction
+</td>
+
+<td style="vertical-align: top;">
+Voice recognition, TTS, MP3
+</td>
+
+</tr>
+
+</tbody>
+</table>
+
+    </td>
+  </tr>
+</table>
+
+<h3>Awards</h3>
+<div style="text-align:left">
+FIRA 2022 HuroCup All-Round <span class="jb-highlight">1st Place</span><br>
+IROS 2018 Robot-Magic <span class="jb-highlight">1st Place</span>
+</div>
+
+</div><!-- end of jb-output jb-render -->
+</div><!-- end of jb-output-code jb-render -->
+
+
+</div>
+<!-- Footer -->
+
+<div class="jb-footer-left">
+    <span id="id-bef26f0d-f8cc-4790-9793-d9bfe25ec871" ><span id="id-bef26f0d-f8cc-4790-9793-d9bfe25ec871"><img id="img-id-bef26f0d-f8cc-4790-9793-d9bfe25ec871"     src="assets/images/logo.png"/></span>
+</span>
+
+</div>
+<div class="jb-footer-right">
+    <span id="id-4454e464-4b14-4832-956b-8aa04a785725" ><span id="id-4454e464-4b14-4832-956b-8aa04a785725"><img id="img-id-4454e464-4b14-4832-956b-8aa04a785725" width="162" height="138"   src="assets/images/robbi.png"/></span>
+</span>
+
+</div>
+
+<aside class="notes">
+
+</aside>
+
+
+
+</section>
+<section id="slide_00005_frag_00001" data-state="slide_00005_frag_00001">
+
+
+<!-- Header -->
+  
+
+<!-- Background -->
+
+
+<!-- Slide -->
+<div class="jb-slide">
+
+<div class="jb-output-code jb-render">
+
+<!-- start embedded style -->
+
+<!-- end embedded style -->
+<div class="jb-output jb-render">
+
+<h2>
+<span style="font-size:1em">Adult Size Robot: ZSTT-NTNU</span>
+</h2>
+
+<table>
+  <tr>
+    <td style="width:15%">
+      <span id="id-89ccb0ae-5798-4be7-ab96-4b14bd0056d4" ><span id="id-89ccb0ae-5798-4be7-ab96-4b14bd0056d4"><img id="img-id-89ccb0ae-5798-4be7-ab96-4b14bd0056d4"     src="assets/images/Robinionsimg.png"/></span>
+</span>
+
+    </td>
+    <td style="width:55%">
+      
+
+<table style="text-align: left; width: 100%; font-size:0.4em" border="1" cellpadding="2"
+cellspacing="2"; border-color: #aaaaaa>
+<!-- Table heading row -->
+
+<tbody>
+<!-- Table body -->
+
+<tr>
+
+<td style="vertical-align: top;">
+Competition
+</td>
+
+<td style="vertical-align: top;">
+RoboCup
+</td>
+
+</tr>
+
+<tr>
+
+<td style="vertical-align: top;">
+Height
+</td>
+
+<td style="vertical-align: top;">
+134cm
+</td>
+
+</tr>
+
+<tr>
+
+<td style="vertical-align: top;">
+Weight
+</td>
+
+<td style="vertical-align: top;">
+12kg
+</td>
+
+</tr>
+
+<tr>
+
+<td style="vertical-align: top;">
+Degrees of Freedom
+</td>
+
+<td style="vertical-align: top;">
+20
+</td>
+
+</tr>
+
+<tr>
+
+<td style="vertical-align: top;">
+Motion Controller
+</td>
+
+<td style="vertical-align: top;">
+OpenCM 9.04 (Arm Cortex-M3)
+</td>
+
+</tr>
+
+<tr>
+
+<td style="vertical-align: top;">
+Main Controller
+</td>
+
+<td style="vertical-align: top;">
+Tablet PC (Intel Atom M5)
+</td>
+
+</tr>
+
+<tr>
+
+<td style="vertical-align: top;">
+Actuators
+</td>
+
+<td style="vertical-align: top;">
+Robotis MX-106, MX-64
+</td>
+
+</tr>
+
+<tr>
+
+<td style="vertical-align: top;">
+Sensors
+</td>
+
+<td style="vertical-align: top;">
+Webcam, IMU
+</td>
+
+</tr>
+
+<tr>
+
+<td style="vertical-align: top;">
+Walking Speed
+</td>
+
+<td style="vertical-align: top;">
+30 cm/sec.
+</td>
+
+</tr>
+
+<tr>
+
+<td style="vertical-align: top;">
+Motions
+</td>
+
+<td style="vertical-align: top;">
+Forward and inverse kinematics, parameterized omni-directional walk engine
+</td>
+
+</tr>
+
+<tr>
+
+<td style="vertical-align: top;">
+Human Robot Interaction
+</td>
+
+<td style="vertical-align: top;">
+Voice recognition, TTS, MP3
+</td>
+
+</tr>
+
+</tbody>
+</table>
+
+    </td>
+  </tr>
+</table>
+
+<h3> Awards </h3>
+<div style="text-align:left">
+RoboCup 2018 Humanoid League Technical Challenge <span class="jb-highlight">3rd</span>
+</div>
+
+</div><!-- end of jb-output jb-render -->
+</div><!-- end of jb-output-code jb-render -->
+
+
+</div>
+<!-- Footer -->
+
+<div class="jb-footer-left">
+    <span id="id-ec00f73b-9fa4-45eb-bd8e-4f1373ba3883" ><span id="id-ec00f73b-9fa4-45eb-bd8e-4f1373ba3883"><img id="img-id-ec00f73b-9fa4-45eb-bd8e-4f1373ba3883"     src="assets/images/logo.png"/></span>
+</span>
+
+</div>
+<div class="jb-footer-right">
+    <span id="id-93017422-ae20-41ac-a78e-0ade7e347af5" ><span id="id-93017422-ae20-41ac-a78e-0ade7e347af5"><img id="img-id-93017422-ae20-41ac-a78e-0ade7e347af5" width="162" height="138"   src="assets/images/robbi.png"/></span>
+</span>
+
+</div>
+
+<aside class="notes">
+
+</aside>
+
+
+
+</section>
+<section id="slide_00006_frag_00001" data-state="slide_00006_frag_00001">
+
+
+<!-- Header -->
+  
+
+<!-- Background -->
+
+
+<!-- Slide -->
+<div class="jb-slide">
+
+<div class="jb-output-code jb-render">
+
+<!-- start embedded style -->
+
+<!-- end embedded style -->
+<div class="jb-output jb-render">
+
+<h2>
+<span style="font-size:1em">Thormang 3</span>
+</h2>
+
+<table>
+  <tr>
+    <td style="width:20%">
+      <span id="id-4742735f-3b20-47d4-94a7-90878660f097" ><span id="id-4742735f-3b20-47d4-94a7-90878660f097"><img id="img-id-4742735f-3b20-47d4-94a7-90878660f097"     src="assets/images/Thormang3img.png"/></span>
+</span>
+
+    </td>
+    <td style="width:55%">
+      
+<table style="text-align: left; width: 100%; font-size:0.4em" border="3" cellpadding="2"
+cellspacing="2"; border-color: #aaaaaa>
+<!-- Table heading row -->
+
+<tbody>
+<!-- Table body -->
+
+<tr>
+
+<td style="vertical-align: top;">
+Competition
+</td>
+
+<td style="vertical-align: top;">
+Dr. Eureka, Archery
+</td>
+
+</tr>
+
+<tr>
+
+<td style="vertical-align: top;">
+Height
+</td>
+
+<td style="vertical-align: top;">
+137.5cm
+</td>
+
+</tr>
+
+<tr>
+
+<td style="vertical-align: top;">
+Weight
+</td>
+
+<td style="vertical-align: top;">
+42kg
+</td>
+
+</tr>
+
+<tr>
+
+<td style="vertical-align: top;">
+Degrees of Freedom
+</td>
+
+<td style="vertical-align: top;">
+31
+</td>
+
+</tr>
+
+<tr>
+
+<td style="vertical-align: top;">
+Motion Controller
+</td>
+
+<td style="vertical-align: top;">
+Intel NUC with Intel Core i5
+</td>
+
+</tr>
+
+<tr>
+
+<td style="vertical-align: top;">
+Main Controller
+</td>
+
+<td style="vertical-align: top;">
+Intel NUC with Intel Core i5
+</td>
+
+</tr>
+
+<tr>
+
+<td style="vertical-align: top;">
+Actuators
+</td>
+
+<td style="vertical-align: top;">
+Robotis Dynamixel Pro
+</td>
+
+</tr>
+
+<tr>
+
+<td style="vertical-align: top;">
+Sensors
+</td>
+
+<td style="vertical-align: top;">
+Webcam, IMU, Hyoku Lidar
+</td>
+
+</tr>
+
+<tr>
+
+<td style="vertical-align: top;">
+Walking Speed
+</td>
+
+<td style="vertical-align: top;">
+30 cm/sec.
+</td>
+
+</tr>
+
+<tr>
+
+<td style="vertical-align: top;">
+Motions
+</td>
+
+<td style="vertical-align: top;">
+Forward and inverse kinematics, parameterized omni-directional walk engine
+</td>
+
+</tr>
+
+<tr>
+
+<td style="vertical-align: top;">
+Human Robot Interaction
+</td>
+
+<td style="vertical-align: top;">
+Voice recognition, TTS, MP3
+</td>
+
+</tr>
+
+</tbody>
+</table>
+
+    </td>
+  </tr>
+</table>
+
+<h3> Awards </h3>
+<div style="text-align:left">
+IEEE IROS HAC 2019 - Robot Magic and Music <span class="jb-highlight">1st</span>
+</div>
+
+</div><!-- end of jb-output jb-render -->
+</div><!-- end of jb-output-code jb-render -->
+
+
+</div>
+<!-- Footer -->
+
+<div class="jb-footer-left">
+    <span id="id-2e3a353b-bf33-4fdc-826c-d3ce3f91fe16" ><span id="id-2e3a353b-bf33-4fdc-826c-d3ce3f91fe16"><img id="img-id-2e3a353b-bf33-4fdc-826c-d3ce3f91fe16"     src="assets/images/logo.png"/></span>
+</span>
+
+</div>
+<div class="jb-footer-right">
+    <span id="id-ab3fe8a3-a148-45bc-a1dd-3821a3666258" ><span id="id-ab3fe8a3-a148-45bc-a1dd-3821a3666258"><img id="img-id-ab3fe8a3-a148-45bc-a1dd-3821a3666258" width="162" height="138"   src="assets/images/robbi.png"/></span>
+</span>
+
+</div>
+
+<aside class="notes">
+
+</aside>
+
+
+
+</section>
+<section id="slide_00007_frag_00001" data-state="slide_00007_frag_00001">
+
+
+<!-- Header -->
+  
+
+<!-- Background -->
+
+
+<!-- Slide -->
+<div class="jb-slide">
+
+<div class="jb-output-code jb-render">
+
+<!-- start embedded style -->
+
+<!-- end embedded style -->
+<div class="jb-output jb-render">
+
+<h1>ERC Competition</h1>
+<h2>
+FIRA Roboworld Cup -  HuroCup All-Round
+</h2>
+
+</div><!-- end of jb-output jb-render -->
+</div><!-- end of jb-output-code jb-render -->
+
+
+</div>
+<!-- Footer -->
+
+<div class="jb-footer-left">
+    <span id="id-4246c5fe-ae52-475c-b7b7-1f95aac013fe" ><span id="id-4246c5fe-ae52-475c-b7b7-1f95aac013fe"><img id="img-id-4246c5fe-ae52-475c-b7b7-1f95aac013fe"     src="assets/images/logo.png"/></span>
+</span>
+
+</div>
+<div class="jb-footer-right">
+    <span id="id-bf08ffda-6d45-47fc-bd82-056e3ab3b892" ><span id="id-bf08ffda-6d45-47fc-bd82-056e3ab3b892"><img id="img-id-bf08ffda-6d45-47fc-bd82-056e3ab3b892" width="162" height="138"   src="assets/images/robbi.png"/></span>
+</span>
+
+</div>
+
+<aside class="notes">
+
+</aside>
+
+
+
+</section>
+<section id="slide_00008_frag_00001" data-state="slide_00008_frag_00001">
+
+
+<!-- Header -->
+  
+
+<!-- Background -->
+
+
+<!-- Slide -->
+<div class="jb-slide">
+
+<div class="jb-output-code jb-render">
+
+<!-- start embedded style -->
+
+<!-- end embedded style -->
+<div class="jb-output jb-render">
+
+<h1>FIRA  HuroCup</h1>
+
+<div class="jb-text">
+<ul>
+<li>Focus on humanoid robotics research problems</li>
+  <ul>
+    <li>Walking, active balancing, uneven terrain, push recovery</li>
+    <li>Complex motion planning with many DOFs</li>
+    <li>Human robot interaction, programming by demonstration</li>
+  </ul>
+</ul>
+</div>
+
+</div><!-- end of jb-output jb-render -->
+</div><!-- end of jb-output-code jb-render -->
+
+
+</div>
+<!-- Footer -->
+
+<div class="jb-footer-left">
+    <span id="id-4d6f1998-4497-431b-be69-618e83106d1f" ><span id="id-4d6f1998-4497-431b-be69-618e83106d1f"><img id="img-id-4d6f1998-4497-431b-be69-618e83106d1f"     src="assets/images/logo.png"/></span>
+</span>
+
+</div>
+<div class="jb-footer-right">
+    <span id="id-17893616-5317-4b0c-821f-d87160486e95" ><span id="id-17893616-5317-4b0c-821f-d87160486e95"><img id="img-id-17893616-5317-4b0c-821f-d87160486e95" width="162" height="138"   src="assets/images/robbi.png"/></span>
+</span>
+
+</div>
+
+<aside class="notes">
+
+</aside>
+
+
+
+</section>
+<section id="slide_00009_frag_00001" data-state="slide_00009_frag_00001">
+
+
+<!-- Header -->
+  
+
+<!-- Background -->
+
+
+<!-- Slide -->
+<div class="jb-slide">
+
+<div class="jb-output-code jb-render">
+
+<!-- start embedded style -->
+
+<!-- end embedded style -->
+<div class="jb-output jb-render">
+
+<h1>FIRA  HuroCup</h1>
+
+<div class="jb-text">
+<ul>
+<li>Flexible, robust, versatile humanoid robots</li>
+<li>Single robot in decathlon: archery, sprint, marathon, obstacle run, united soccer, 
+  triple jump, spartan race, weightlifting, basketball, mini-drc</li>
+<li>Future applications in industry for complex manufacturing tasks</li>
+</ul>
+</div>
+
+</div><!-- end of jb-output jb-render -->
+</div><!-- end of jb-output-code jb-render -->
+
+
+</div>
+<!-- Footer -->
+
+<div class="jb-footer-left">
+    <span id="id-c6318704-f8a4-4813-abc4-ecf4315bfb85" ><span id="id-c6318704-f8a4-4813-abc4-ecf4315bfb85"><img id="img-id-c6318704-f8a4-4813-abc4-ecf4315bfb85"     src="assets/images/logo.png"/></span>
+</span>
+
+</div>
+<div class="jb-footer-right">
+    <span id="id-e18e81bc-d505-428e-9eb4-2301b9b0aede" ><span id="id-e18e81bc-d505-428e-9eb4-2301b9b0aede"><img id="img-id-e18e81bc-d505-428e-9eb4-2301b9b0aede" width="162" height="138"   src="assets/images/robbi.png"/></span>
+</span>
+
+</div>
+
+<aside class="notes">
+
+</aside>
+
+
+
+</section>
+<section id="slide_00010_frag_00001" data-state="slide_00010_frag_00001">
+
+
+<!-- Header -->
+  
+
+<!-- Background -->
+
+
+<!-- Slide -->
+<div class="jb-slide">
+
+<div class="jb-output-code jb-render">
+
+<!-- start embedded style -->
+
+<!-- end embedded style -->
+<div class="jb-output jb-render">
+
+<h1>FIRA  HuroCup: <br>Weightlifting</h1>
+
+<div class="jb-text">
+<ul>
+<li>Active balancing</li>
+<li>Heavy load</li>
+<li>Adjust for change in center of gravity</li>
+
+<div class="slimage" id="weightlifting">
+<span id="id-801823f5-11ad-43dd-9d03-06446d186840" ><span id="id-801823f5-11ad-43dd-9d03-06446d186840"><img id="img-id-801823f5-11ad-43dd-9d03-06446d186840"     src="assets/images/weightlifting.png"/></span>
+</span>
+
+</div>
+
+</div><!-- end of jb-output jb-render -->
+</div><!-- end of jb-output-code jb-render -->
+
+
+</div>
+<!-- Footer -->
+
+<div class="jb-footer-left">
+    <span id="id-791b8e98-eec8-4df3-b140-c26dbab595d8" ><span id="id-791b8e98-eec8-4df3-b140-c26dbab595d8"><img id="img-id-791b8e98-eec8-4df3-b140-c26dbab595d8"     src="assets/images/logo.png"/></span>
+</span>
+
+</div>
+<div class="jb-footer-right">
+    <span id="id-34f00221-dde8-4f71-8bbe-0a1c093823c1" ><span id="id-34f00221-dde8-4f71-8bbe-0a1c093823c1"><img id="img-id-34f00221-dde8-4f71-8bbe-0a1c093823c1" width="162" height="138"   src="assets/images/robbi.png"/></span>
+</span>
+
+</div>
+
+<aside class="notes">
+
+</aside>
+
+
+
+</section>
+<section id="slide_00011_frag_00001" data-state="slide_00011_frag_00001">
+
+
+<!-- Header -->
+  
+
+<!-- Background -->
+
+
+<!-- Slide -->
+<div class="jb-slide">
+
+<div class="jb-output-code jb-render">
+
+<!-- start embedded style -->
+
+<!-- end embedded style -->
+<div class="jb-output jb-render">
+
+<h1>FIRA HuroCup: Weightlifting</h1>
+
+<div id="shida_wl" style="width:100%;">
+<span id="id-b382dfa7-08a3-443d-9474-140b2b764779" ><span id="id-b382dfa7-08a3-443d-9474-140b2b764779">
+           <video id="vid-id-b382dfa7-08a3-443d-9474-140b2b764779"   style="pointer-events:all;" controls>
+           <source src="assets/videos/shida_wl.mp4"/>
+           </span>
+</span>
+
+</div>
+
+</div><!-- end of jb-output jb-render -->
+</div><!-- end of jb-output-code jb-render -->
+
+
+</div>
+<!-- Footer -->
+
+<div class="jb-footer-left">
+    <span id="id-66a6769b-98a2-4ca4-b555-e04fea63b13a" ><span id="id-66a6769b-98a2-4ca4-b555-e04fea63b13a"><img id="img-id-66a6769b-98a2-4ca4-b555-e04fea63b13a"     src="assets/images/logo.png"/></span>
+</span>
+
+</div>
+<div class="jb-footer-right">
+    <span id="id-175aa52a-c17a-4e0c-953a-c505287c116d" ><span id="id-175aa52a-c17a-4e0c-953a-c505287c116d"><img id="img-id-175aa52a-c17a-4e0c-953a-c505287c116d" width="162" height="138"   src="assets/images/robbi.png"/></span>
+</span>
+
+</div>
+
+<aside class="notes">
+
+</aside>
+
+
+
+</section>
+<section id="slide_00012_frag_00001" data-state="slide_00012_frag_00001">
+
+
+<!-- Header -->
+  
+
+<!-- Background -->
+
+
+<!-- Slide -->
+<div class="jb-slide">
+
+<div class="jb-output-code jb-render">
+
+<!-- start embedded style -->
+
+<!-- end embedded style -->
+<div class="jb-output jb-render">
+
+<h1>FIRA  HuroCup:<br> Sprint</h1>
+
+<div class="jb-text">
+<p>Run as fast as possible 3m forward, then 3m backwards</p>
+</div>
+
+<span id="id-70594676-af6c-4ddd-9ee6-19a0a6175c0a" ><span id="id-70594676-af6c-4ddd-9ee6-19a0a6175c0a"><img id="img-id-70594676-af6c-4ddd-9ee6-19a0a6175c0a"     src="assets/images/sprint.png"/></span>
+</span>
+
+</div><!-- end of jb-output jb-render -->
+</div><!-- end of jb-output-code jb-render -->
+
+
+</div>
+<!-- Footer -->
+
+<div class="jb-footer-left">
+    <span id="id-b8af5e4e-29ee-45db-9756-24addffdf5cb" ><span id="id-b8af5e4e-29ee-45db-9756-24addffdf5cb"><img id="img-id-b8af5e4e-29ee-45db-9756-24addffdf5cb"     src="assets/images/logo.png"/></span>
+</span>
+
+</div>
+<div class="jb-footer-right">
+    <span id="id-aec501ff-3432-437b-9d16-913eb25534a0" ><span id="id-aec501ff-3432-437b-9d16-913eb25534a0"><img id="img-id-aec501ff-3432-437b-9d16-913eb25534a0" width="162" height="138"   src="assets/images/robbi.png"/></span>
+</span>
+
+</div>
+
+<aside class="notes">
+
+</aside>
+
+
+
+</section>
+<section id="slide_00013_frag_00001" data-state="slide_00013_frag_00001">
+
+
+<!-- Header -->
+  
+
+<!-- Background -->
+
+
+<!-- Slide -->
+<div class="jb-slide">
+
+<div class="jb-output-code jb-render">
+
+<!-- start embedded style -->
+
+<!-- end embedded style -->
+<div class="jb-output jb-render">
+
+<h1>FIRA HuroCup: Sprint</h1>
+  
+<span id="id-a4440402-6754-4d34-a73d-8b32119b2167" ><span id="id-a4440402-6754-4d34-a73d-8b32119b2167">
+           <video id="vid-id-a4440402-6754-4d34-a73d-8b32119b2167"   style="pointer-events:all;" controls>
+           <source src="assets/videos/sprint1.mp4"/>
+           </span>
+</span>
+
+</div><!-- end of jb-output jb-render -->
+</div><!-- end of jb-output-code jb-render -->
+
+
+</div>
+<!-- Footer -->
+
+<div class="jb-footer-left">
+    <span id="id-3df57401-6151-4fc8-b683-2a75a2eca243" ><span id="id-3df57401-6151-4fc8-b683-2a75a2eca243"><img id="img-id-3df57401-6151-4fc8-b683-2a75a2eca243"     src="assets/images/logo.png"/></span>
+</span>
+
+</div>
+<div class="jb-footer-right">
+    <span id="id-3a68a576-e28c-46df-9a2b-d3e26247e867" ><span id="id-3a68a576-e28c-46df-9a2b-d3e26247e867"><img id="img-id-3a68a576-e28c-46df-9a2b-d3e26247e867" width="162" height="138"   src="assets/images/robbi.png"/></span>
+</span>
+
+</div>
+
+<aside class="notes">
+
+</aside>
+
+
+
+</section>
+<section id="slide_00014_frag_00001" data-state="slide_00014_frag_00001">
+
+
+<!-- Header -->
+  
+
+<!-- Background -->
+
+
+<!-- Slide -->
+<div class="jb-slide">
+
+<div class="jb-output-code jb-render">
+
+<!-- start embedded style -->
+
+<!-- end embedded style -->
+<div class="jb-output jb-render">
+
+<h1>FIRA  HuroCup: United Soccer</h1>
+
+<div class="jb-text">
+<p>Play soccer with random team mates</p>
+</div>
+
+<span id="id-3476b693-4fb5-4b73-9467-902b3e20c48b" ><span id="id-3476b693-4fb5-4b73-9467-902b3e20c48b"><img id="img-id-3476b693-4fb5-4b73-9467-902b3e20c48b"     src="assets/images/unitedSoccer.png"/></span>
+</span>
+
+</div><!-- end of jb-output jb-render -->
+</div><!-- end of jb-output-code jb-render -->
+
+
+</div>
+<!-- Footer -->
+
+<div class="jb-footer-left">
+    <span id="id-e0580cb4-4fb0-430f-b6f3-b7ba093f8f8f" ><span id="id-e0580cb4-4fb0-430f-b6f3-b7ba093f8f8f"><img id="img-id-e0580cb4-4fb0-430f-b6f3-b7ba093f8f8f"     src="assets/images/logo.png"/></span>
+</span>
+
+</div>
+<div class="jb-footer-right">
+    <span id="id-4fbc3bb8-c4c3-43cb-a633-04c2451882b3" ><span id="id-4fbc3bb8-c4c3-43cb-a633-04c2451882b3"><img id="img-id-4fbc3bb8-c4c3-43cb-a633-04c2451882b3" width="162" height="138"   src="assets/images/robbi.png"/></span>
+</span>
+
+</div>
+
+<aside class="notes">
+
+</aside>
+
+
+
+</section>
+<section id="slide_00015_frag_00001" data-state="slide_00015_frag_00001">
+
+
+<!-- Header -->
+  
+
+<!-- Background -->
+
+
+<!-- Slide -->
+<div class="jb-slide">
+
+<div class="jb-output-code jb-render">
+
+<!-- start embedded style -->
+
+<!-- end embedded style -->
+<div class="jb-output jb-render">
+
+<h1>FIRA  HuroCup<br> Spartan Race</h1>
+
+<div class="jb-text">
+<ul>
+   <li>Advanced mobility challenge $($climbing$)$ and complex motion planning</li>
+</ul>
+</div>
+
+<table>
+<tr>
+<td style="width:35%"> <span id="id-5074bda6-2ca5-45dd-90fd-09000c5b7593" ><span id="id-5074bda6-2ca5-45dd-90fd-09000c5b7593"><img id="img-id-5074bda6-2ca5-45dd-90fd-09000c5b7593"     src="assets/images/liftAndCarry.png"/></span>
+</span>
+ </td>
+<td style="width:35%"> <span id="id-d2cc7290-3053-4206-9e96-7e1fd2e3fce0" ><span id="id-d2cc7290-3053-4206-9e96-7e1fd2e3fce0"><img id="img-id-d2cc7290-3053-4206-9e96-7e1fd2e3fce0"     src="assets/images/wallClimbing.png"/></span>
+</span>
+ </td>
+<td style="width:35%"> <span id="id-7e373430-d620-44e6-93c8-0604e12bc6b7" ><span id="id-7e373430-d620-44e6-93c8-0604e12bc6b7"><img id="img-id-7e373430-d620-44e6-93c8-0604e12bc6b7"     src="assets/images/ropeClimb.jpg"/></span>
+</span>
+ </td>
+</tr>
+</table>
+
+</div><!-- end of jb-output jb-render -->
+</div><!-- end of jb-output-code jb-render -->
+
+
+</div>
+<!-- Footer -->
+
+<div class="jb-footer-left">
+    <span id="id-77167091-8b52-4b3c-9d2b-972cc9da0776" ><span id="id-77167091-8b52-4b3c-9d2b-972cc9da0776"><img id="img-id-77167091-8b52-4b3c-9d2b-972cc9da0776"     src="assets/images/logo.png"/></span>
+</span>
+
+</div>
+<div class="jb-footer-right">
+    <span id="id-d724bc0e-8c63-4f45-8194-157423a4fa2b" ><span id="id-d724bc0e-8c63-4f45-8194-157423a4fa2b"><img id="img-id-d724bc0e-8c63-4f45-8194-157423a4fa2b" width="162" height="138"   src="assets/images/robbi.png"/></span>
+</span>
+
+</div>
+
+<aside class="notes">
+
+</aside>
+
+
+
+</section>
+<section id="slide_00016_frag_00001" data-state="slide_00016_frag_00001">
+
+
+<!-- Header -->
+  
+
+<!-- Background -->
+
+
+<!-- Slide -->
+<div class="jb-slide">
+
+<div class="jb-output-code jb-render">
+
+<!-- start embedded style -->
+
+<!-- end embedded style -->
+<div class="jb-output jb-render">
+
+<h1>FIRA  HuroCup:<br>Penalty Kick</h1>
+
+<div class="jb-text">
+Approach and dribble the ball past obstacles and score on static goal keeper
+</div>
+
+<span id="id-f7e6b82f-91bd-4c64-ac72-87ef5220fa2b" ><span id="id-f7e6b82f-91bd-4c64-ac72-87ef5220fa2b"><img id="img-id-f7e6b82f-91bd-4c64-ac72-87ef5220fa2b"     src="assets/images/penaltyKick.png"/></span>
+</span>
+
+</div><!-- end of jb-output jb-render -->
+</div><!-- end of jb-output-code jb-render -->
+
+
+</div>
+<!-- Footer -->
+
+<div class="jb-footer-left">
+    <span id="id-211240ee-77b7-4a47-a9a9-c1e7dd0e4276" ><span id="id-211240ee-77b7-4a47-a9a9-c1e7dd0e4276"><img id="img-id-211240ee-77b7-4a47-a9a9-c1e7dd0e4276"     src="assets/images/logo.png"/></span>
+</span>
+
+</div>
+<div class="jb-footer-right">
+    <span id="id-7faf5f68-630f-42ee-bb88-3fe8f08bfb12" ><span id="id-7faf5f68-630f-42ee-bb88-3fe8f08bfb12"><img id="img-id-7faf5f68-630f-42ee-bb88-3fe8f08bfb12" width="162" height="138"   src="assets/images/robbi.png"/></span>
+</span>
+
+</div>
+
+<aside class="notes">
+
+</aside>
+
+
+
+</section>
+<section id="slide_00017_frag_00001" data-state="slide_00017_frag_00001">
+
+
+<!-- Header -->
+  
+
+<!-- Background -->
+
+
+<!-- Slide -->
+<div class="jb-slide">
+
+<div class="jb-output-code jb-render">
+
+<!-- start embedded style -->
+
+<!-- end embedded style -->
+<div class="jb-output jb-render">
+
+<h1>FIRA  HuroCup:<br> Obstacle Run</h1>
+
+<div class="jb-text">
+Navigation challenge: the robot must find exit in unknown environment
+</div>
+
+<span id="id-871c42b6-2063-4b4f-bd57-efa22f07072e" ><span id="id-871c42b6-2063-4b4f-bd57-efa22f07072e"><img id="img-id-871c42b6-2063-4b4f-bd57-efa22f07072e"     src="assets/images/obstacleRun.png"/></span>
+</span>
+
+</div><!-- end of jb-output jb-render -->
+</div><!-- end of jb-output-code jb-render -->
+
+
+</div>
+<!-- Footer -->
+
+<div class="jb-footer-left">
+    <span id="id-8eacbb2e-2308-4557-a73e-5796763d3ede" ><span id="id-8eacbb2e-2308-4557-a73e-5796763d3ede"><img id="img-id-8eacbb2e-2308-4557-a73e-5796763d3ede"     src="assets/images/logo.png"/></span>
+</span>
+
+</div>
+<div class="jb-footer-right">
+    <span id="id-bc2d0539-35c4-4a57-a725-c527fc02f2a0" ><span id="id-bc2d0539-35c4-4a57-a725-c527fc02f2a0"><img id="img-id-bc2d0539-35c4-4a57-a725-c527fc02f2a0" width="162" height="138"   src="assets/images/robbi.png"/></span>
+</span>
+
+</div>
+
+<aside class="notes">
+
+</aside>
+
+
+
+</section>
+<section id="slide_00018_frag_00001" data-state="slide_00018_frag_00001">
+
+
+<!-- Header -->
+  
+
+<!-- Background -->
+
+
+<!-- Slide -->
+<div class="jb-slide">
+
+<div class="jb-output-code jb-render">
+
+<!-- start embedded style -->
+
+<!-- end embedded style -->
+<div class="jb-output jb-render">
+
+<h1>FIRA  HuroCup:<br> Marathon</h1>
+
+<div class="jb-text">
+<ul>
+<li>Endurance race 425m</li>
+<li>Robot follows track and markers</li>
+<li>Advanced vision challenge</li>
+<ul>
+</div>
+<span id="id-19dd41c0-7dd9-4926-98fb-9a75ba2faa94" ><span id="id-19dd41c0-7dd9-4926-98fb-9a75ba2faa94"><img id="img-id-19dd41c0-7dd9-4926-98fb-9a75ba2faa94"     src="assets/images/marathon.png"/></span>
+</span>
+
+</div><!-- end of jb-output jb-render -->
+</div><!-- end of jb-output-code jb-render -->
+
+
+</div>
+<!-- Footer -->
+
+<div class="jb-footer-left">
+    <span id="id-f096966c-a6d0-44fc-a0c3-b259c47976a7" ><span id="id-f096966c-a6d0-44fc-a0c3-b259c47976a7"><img id="img-id-f096966c-a6d0-44fc-a0c3-b259c47976a7"     src="assets/images/logo.png"/></span>
+</span>
+
+</div>
+<div class="jb-footer-right">
+    <span id="id-260d813c-058f-411d-95aa-8ce55883b5da" ><span id="id-260d813c-058f-411d-95aa-8ce55883b5da"><img id="img-id-260d813c-058f-411d-95aa-8ce55883b5da" width="162" height="138"   src="assets/images/robbi.png"/></span>
+</span>
+
+</div>
+
+<aside class="notes">
+
+</aside>
+
+
+
+</section>
+<section id="slide_00019_frag_00001" data-state="slide_00019_frag_00001">
+
+
+<!-- Header -->
+  
+
+<!-- Background -->
+
+
+<!-- Slide -->
+<div class="jb-slide">
+
+<div class="jb-output-code jb-render">
+
+<!-- start embedded style -->
+
+<!-- end embedded style -->
+<div class="jb-output jb-render">
+
+<h1>FIRA  HuroCup:<br>Triple Jump</h1>
+
+  <div class="jb-text">
+  <p>Highly dynamic motion, advanced motion sychncronisation, compliant landing
+  </div>
+
+<span id="id-308b6fd1-006d-410d-9b67-eb5cc687e41d" ><span id="id-308b6fd1-006d-410d-9b67-eb5cc687e41d"><img id="img-id-308b6fd1-006d-410d-9b67-eb5cc687e41d"     src="assets/images/tripleJump.png"/></span>
+</span>
+
+</div><!-- end of jb-output jb-render -->
+</div><!-- end of jb-output-code jb-render -->
+
+
+</div>
+<!-- Footer -->
+
+<div class="jb-footer-left">
+    <span id="id-7712f8b4-07db-41a8-bc7c-3e0b1ec0dcbf" ><span id="id-7712f8b4-07db-41a8-bc7c-3e0b1ec0dcbf"><img id="img-id-7712f8b4-07db-41a8-bc7c-3e0b1ec0dcbf"     src="assets/images/logo.png"/></span>
+</span>
+
+</div>
+<div class="jb-footer-right">
+    <span id="id-e1cb91cc-01c8-4141-9934-71645411cc61" ><span id="id-e1cb91cc-01c8-4141-9934-71645411cc61"><img id="img-id-e1cb91cc-01c8-4141-9934-71645411cc61" width="162" height="138"   src="assets/images/robbi.png"/></span>
+</span>
+
+</div>
+
+<aside class="notes">
+
+</aside>
+
+
+
+</section>
+<section id="slide_00020_frag_00001" data-state="slide_00020_frag_00001">
+
+
+<!-- Header -->
+  
+
+<!-- Background -->
+
+
+<!-- Slide -->
+<div class="jb-slide">
+
+<div class="jb-output-code jb-render">
+
+<!-- start embedded style -->
+
+<!-- end embedded style -->
+<div class="jb-output jb-render">
+
+<h1>FIRA  HuroCup:<br>Basketball</h1>
+
+<div class="jb-text">
+<p>Manipulation and control of small objects</p>
+<p>More difficult than kicking a ball - No second chance</p>
+</div>
+  
+<span id="id-4ac7981d-2d4e-45a5-bbd1-1f645c3e79d7" ><span id="id-4ac7981d-2d4e-45a5-bbd1-1f645c3e79d7"><img id="img-id-4ac7981d-2d4e-45a5-bbd1-1f645c3e79d7"     src="assets/images/basketball.png"/></span>
+</span>
+
+</div><!-- end of jb-output jb-render -->
+</div><!-- end of jb-output-code jb-render -->
+
+
+</div>
+<!-- Footer -->
+
+<div class="jb-footer-left">
+    <span id="id-c65262c3-4b6f-494d-9ae5-b137923887b1" ><span id="id-c65262c3-4b6f-494d-9ae5-b137923887b1"><img id="img-id-c65262c3-4b6f-494d-9ae5-b137923887b1"     src="assets/images/logo.png"/></span>
+</span>
+
+</div>
+<div class="jb-footer-right">
+    <span id="id-8a8f3902-cd90-469c-bc7f-c41651d3fbfc" ><span id="id-8a8f3902-cd90-469c-bc7f-c41651d3fbfc"><img id="img-id-8a8f3902-cd90-469c-bc7f-c41651d3fbfc" width="162" height="138"   src="assets/images/robbi.png"/></span>
+</span>
+
+</div>
+
+<aside class="notes">
+
+</aside>
+
+
+
+</section>
+<section id="slide_00021_frag_00001" data-state="slide_00021_frag_00001">
+
+
+<!-- Header -->
+  
+
+<!-- Background -->
+
+
+<!-- Slide -->
+<div class="jb-slide">
+
+<div class="jb-output-code jb-render">
+
+<!-- start embedded style -->
+
+<!-- end embedded style -->
+<div class="jb-output jb-render">
+
+<h1>FIRA  HuroCup:<br>Archery</h1>
+
+  <div class="jb-text">
+    <p>Highly accurate motion planning and force control
+  </div>
+
+<span id="id-c701adcc-1d42-4080-9ec9-68a6004c48e6" ><span id="id-c701adcc-1d42-4080-9ec9-68a6004c48e6"><img id="img-id-c701adcc-1d42-4080-9ec9-68a6004c48e6"     src="assets/images/archery.png"/></span>
+</span>
+
+</div><!-- end of jb-output jb-render -->
+</div><!-- end of jb-output-code jb-render -->
+
+
+</div>
+<!-- Footer -->
+
+<div class="jb-footer-left">
+    <span id="id-a1d2bec4-95a8-491c-8f30-ac6b12d3d2a4" ><span id="id-a1d2bec4-95a8-491c-8f30-ac6b12d3d2a4"><img id="img-id-a1d2bec4-95a8-491c-8f30-ac6b12d3d2a4"     src="assets/images/logo.png"/></span>
+</span>
+
+</div>
+<div class="jb-footer-right">
+    <span id="id-739dba73-f648-426c-847e-0006c2d2da39" ><span id="id-739dba73-f648-426c-847e-0006c2d2da39"><img id="img-id-739dba73-f648-426c-847e-0006c2d2da39" width="162" height="138"   src="assets/images/robbi.png"/></span>
+</span>
+
+</div>
+
+<aside class="notes">
+
+</aside>
+
+
+
+</section>
+<section id="slide_00022_frag_00001" data-state="slide_00022_frag_00001">
+
+
+<!-- Header -->
+  
+
+<!-- Background -->
+
+
+<!-- Slide -->
+<div class="jb-slide">
+
+<div class="jb-output-code jb-render">
+
+<!-- start embedded style -->
+
+<!-- end embedded style -->
+<div class="jb-output jb-render">
+
+<h1>Robot Archery: Target Detection</h1>
+
+<div class="jb-text">
+<ul>
+  <li><p>Detection based on HOG features</p></li>
+  <li><p>Learn classifer (SVM) from training data</p> 
+</ul>
+        <table>
+            <tr>
+               <td style="width:50%"> <span id="id-056ffc51-f9c9-4fc5-b166-3062831f16a6" ><span id="id-056ffc51-f9c9-4fc5-b166-3062831f16a6"><img id="img-id-056ffc51-f9c9-4fc5-b166-3062831f16a6"     src="assets/images/hog1.png"/></span>
+</span>
+ </td>
+               <td style="width:50%"> <span id="id-7053ce4b-ce01-4975-9c32-e2ea03cbf7c9" ><span id="id-7053ce4b-ce01-4975-9c32-e2ea03cbf7c9"><img id="img-id-7053ce4b-ce01-4975-9c32-e2ea03cbf7c9"     src="assets/images/hog2.png"/></span>
+</span>
+ </td>
+            </tr>
+        </table>  
+</div>
+
+</div><!-- end of jb-output jb-render -->
+</div><!-- end of jb-output-code jb-render -->
+
+
+</div>
+<!-- Footer -->
+
+<div class="jb-footer-left">
+    <span id="id-492ec7f6-2861-4ffb-b24e-cbfb16fa22e8" ><span id="id-492ec7f6-2861-4ffb-b24e-cbfb16fa22e8"><img id="img-id-492ec7f6-2861-4ffb-b24e-cbfb16fa22e8"     src="assets/images/logo.png"/></span>
+</span>
+
+</div>
+<div class="jb-footer-right">
+    <span id="id-193f9a11-7b87-422d-92eb-c1c45e7bc5dd" ><span id="id-193f9a11-7b87-422d-92eb-c1c45e7bc5dd"><img id="img-id-193f9a11-7b87-422d-92eb-c1c45e7bc5dd" width="162" height="138"   src="assets/images/robbi.png"/></span>
+</span>
+
+</div>
+
+<aside class="notes">
+
+</aside>
+
+
+
+</section>
+<section id="slide_00023_frag_00001" data-state="slide_00023_frag_00001">
+
+
+<!-- Header -->
+  
+
+<!-- Background -->
+
+
+<!-- Slide -->
+<div class="jb-slide">
+
+<div class="jb-output-code jb-render">
+
+<!-- start embedded style -->
+
+<!-- end embedded style -->
+<div class="jb-output jb-render">
+
+<h1>FIRA  HuroCup</h1>
+
+<span id="id-85960e1f-f2d9-4296-beec-4324950aeee1" ><span id="id-85960e1f-f2d9-4296-beec-4324950aeee1">
+           <video id="vid-id-85960e1f-f2d9-4296-beec-4324950aeee1"   style="pointer-events:all;" controls>
+           <source src="assets/videos/lm1.mp4"/>
+           </span>
+</span>
+
+</div><!-- end of jb-output jb-render -->
+</div><!-- end of jb-output-code jb-render -->
+
+
+</div>
+<!-- Footer -->
+
+<div class="jb-footer-left">
+    <span id="id-81676aad-8d31-4c92-87ea-7145f9564acd" ><span id="id-81676aad-8d31-4c92-87ea-7145f9564acd"><img id="img-id-81676aad-8d31-4c92-87ea-7145f9564acd"     src="assets/images/logo.png"/></span>
+</span>
+
+</div>
+<div class="jb-footer-right">
+    <span id="id-3af21a73-734b-40c8-9fdb-d05f5a1fb779" ><span id="id-3af21a73-734b-40c8-9fdb-d05f5a1fb779"><img id="img-id-3af21a73-734b-40c8-9fdb-d05f5a1fb779" width="162" height="138"   src="assets/images/robbi.png"/></span>
+</span>
+
+</div>
+
+<aside class="notes">
+
+</aside>
+
+
+
+</section>
+<section id="slide_00024_frag_00001" data-state="slide_00024_frag_00001">
+
+
+<!-- Header -->
+  
+
+<!-- Background -->
+
+
+<!-- Slide -->
+<div class="jb-slide">
+
+<div class="jb-output-code jb-render">
+
+<!-- start embedded style -->
+
+<!-- end embedded style -->
+<div class="jb-output jb-render">
+
+<h1>Programming by Demonstration</h1>
+
+</div><!-- end of jb-output jb-render -->
+</div><!-- end of jb-output-code jb-render -->
+
+
+</div>
+<!-- Footer -->
+
+<div class="jb-footer-left">
+    <span id="id-d3bbf9ba-1d40-4311-96bc-b4c7eda4ca4a" ><span id="id-d3bbf9ba-1d40-4311-96bc-b4c7eda4ca4a"><img id="img-id-d3bbf9ba-1d40-4311-96bc-b4c7eda4ca4a"     src="assets/images/logo.png"/></span>
+</span>
+
+</div>
+<div class="jb-footer-right">
+    <span id="id-6119d411-afce-4cbb-80b7-667b3e2b9709" ><span id="id-6119d411-afce-4cbb-80b7-667b3e2b9709"><img id="img-id-6119d411-afce-4cbb-80b7-667b3e2b9709" width="162" height="138"   src="assets/images/robbi.png"/></span>
+</span>
+
+</div>
+
+<aside class="notes">
+
+</aside>
+
+
+
+</section>
+<section id="slide_00025_frag_00001" data-state="slide_00025_frag_00001">
+
+
+<!-- Header -->
+  
+
+<!-- Background -->
+
+
+<!-- Slide -->
+<div class="jb-slide">
+
+<div class="jb-output-code jb-render">
+
+<!-- start embedded style -->
+
+<!-- end embedded style -->
+<div class="jb-output jb-render">
+
+<h1>Dr. Eureka</h1>
+
+<p>Dr. Eureka game is a logic game for children and adults.</p>
+
+<table>
+  <tr>
+    <td>
+      <p>Each player has three clear tubes.</p>
+        <ul>
+          <li>2 red balls</li>
+          <li>2 green balls</li>
+          <li>2 purple balls</li>
+        </ul>
+    </td>
+    <td>
+      <span id="id-2a50e4a0-6945-4836-a640-5975b326c7b2" ><span id="id-2a50e4a0-6945-4836-a640-5975b326c7b2"><img id="img-id-2a50e4a0-6945-4836-a640-5975b326c7b2"     src="assets/images/e1.png"/></span>
+</span>
+
+    </td>
+  </tr>
+</table>
+
+</div><!-- end of jb-output jb-render -->
+</div><!-- end of jb-output-code jb-render -->
+
+
+</div>
+<!-- Footer -->
+
+<div class="jb-footer-left">
+    <span id="id-fc408da8-e1e7-4bbe-a91b-e859bcfc7db9" ><span id="id-fc408da8-e1e7-4bbe-a91b-e859bcfc7db9"><img id="img-id-fc408da8-e1e7-4bbe-a91b-e859bcfc7db9"     src="assets/images/logo.png"/></span>
+</span>
+
+</div>
+<div class="jb-footer-right">
+    <span id="id-795c14f1-3fed-4001-a272-b25936b97105" ><span id="id-795c14f1-3fed-4001-a272-b25936b97105"><img id="img-id-795c14f1-3fed-4001-a272-b25936b97105" width="162" height="138"   src="assets/images/robbi.png"/></span>
+</span>
+
+</div>
+
+<aside class="notes">
+
+</aside>
+
+
+
+</section>
+<section id="slide_00026_frag_00001" data-state="slide_00026_frag_00001">
+
+
+<!-- Header -->
+  
+
+<!-- Background -->
+
+
+<!-- Slide -->
+<div class="jb-slide">
+
+<div class="jb-output-code jb-render">
+
+<!-- start embedded style -->
+
+<!-- end embedded style -->
+<div class="jb-output jb-render">
+
+<table>
+<tr>
+<td>
+<div class="jb-text">
+  <p>
+  A challenge card is drawn and the players then have to create the configuration shown on the card.
+  </p>
+
+  <p>
+  Players can only pour balls from one tube into another.
+  </p>
+</div>
+</td>
+
+<td>
+  <div style="text-align:center">
+  <span id="id-a1c0bfe2-a2ae-4567-8003-739ed9e52117" ><span id="id-a1c0bfe2-a2ae-4567-8003-739ed9e52117"><img id="img-id-a1c0bfe2-a2ae-4567-8003-739ed9e52117"     src="assets/images/e2.png"/></span>
+</span>
+
+  </div>
+</td>
+</tr>
+</table>
+
+</div><!-- end of jb-output jb-render -->
+</div><!-- end of jb-output-code jb-render -->
+
+
+</div>
+<!-- Footer -->
+
+<div class="jb-footer-left">
+    <span id="id-a44c3462-75a1-4651-af0c-d3ae26170234" ><span id="id-a44c3462-75a1-4651-af0c-d3ae26170234"><img id="img-id-a44c3462-75a1-4651-af0c-d3ae26170234"     src="assets/images/logo.png"/></span>
+</span>
+
+</div>
+<div class="jb-footer-right">
+    <span id="id-9d2c7020-42ae-46ac-92d7-74273997713c" ><span id="id-9d2c7020-42ae-46ac-92d7-74273997713c"><img id="img-id-9d2c7020-42ae-46ac-92d7-74273997713c" width="162" height="138"   src="assets/images/robbi.png"/></span>
+</span>
+
+</div>
+
+<aside class="notes">
+
+</aside>
+
+
+
+</section>
+<section id="slide_00027_frag_00001" data-state="slide_00027_frag_00001">
+
+
+<!-- Header -->
+  
+
+<!-- Background -->
+
+
+<!-- Slide -->
+<div class="jb-slide">
+
+<div class="jb-output-code jb-render">
+
+<!-- start embedded style -->
+
+<!-- end embedded style -->
+<div class="jb-output jb-render">
+<div class="document">
+<p>Dr. Eureka Game is an interesting benchmark for AI</p>
+<ul class="simple">
+<li>Computer vision to detect challenge card</li>
+<li>AI planner to find sequence of pours</li>
+<li>Visual servoing for detecting and grasping tubes</li>
+<li>Motion planning to pour balls from one tube to the other</li>
+</ul>
+</div>
+
+</div><!-- end of jb-output jb-render -->
+</div><!-- end of jb-output-code jb-render -->
+
+
+</div>
+<!-- Footer -->
+
+<div class="jb-footer-left">
+    <span id="id-aded1e66-940f-47ed-8990-74644af3d534" ><span id="id-aded1e66-940f-47ed-8990-74644af3d534"><img id="img-id-aded1e66-940f-47ed-8990-74644af3d534"     src="assets/images/logo.png"/></span>
+</span>
+
+</div>
+<div class="jb-footer-right">
+    <span id="id-26575ae2-c390-4000-a751-a1ecfb989990" ><span id="id-26575ae2-c390-4000-a751-a1ecfb989990"><img id="img-id-26575ae2-c390-4000-a751-a1ecfb989990" width="162" height="138"   src="assets/images/robbi.png"/></span>
+</span>
+
+</div>
+
+<aside class="notes">
+
+</aside>
+
+
+
+</section>
+<section id="slide_00028_frag_00001" data-state="slide_00028_frag_00001">
+
+
+<!-- Header -->
+  
+
+<!-- Background -->
+
+
+<!-- Slide -->
+<div class="jb-slide">
+
+<div class="jb-output-code jb-render">
+
+<!-- start embedded style -->
+
+<!-- end embedded style -->
+<div class="jb-output jb-render">
+
+<h1>Dr. Eureka Game</h1>
+
+<div class="jb-text">
+<p>Visual Servoing</p>
+<p>Inverse Kinematics (IK)</p>
+<ul>
+<li>Neural Network for fast motions</li>
+<li>Jacobian-based IK for precise motions</li>
+</div>
+
+
+<span id="id-76a7867e-c1a5-4191-b862-a7051f6f21a5" ><span id="id-76a7867e-c1a5-4191-b862-a7051f6f21a5">
+           <video id="vid-id-76a7867e-c1a5-4191-b862-a7051f6f21a5"   style="pointer-events:all;" controls>
+           <source src="assets/videos/eureka1.mp4"/>
+           </span>
+</span>
+
+</div><!-- end of jb-output jb-render -->
+</div><!-- end of jb-output-code jb-render -->
+
+
+</div>
+<!-- Footer -->
+
+<div class="jb-footer-left">
+    <span id="id-06713831-d29b-4741-9ce5-586f73349308" ><span id="id-06713831-d29b-4741-9ce5-586f73349308"><img id="img-id-06713831-d29b-4741-9ce5-586f73349308"     src="assets/images/logo.png"/></span>
+</span>
+
+</div>
+<div class="jb-footer-right">
+    <span id="id-4344b4fd-a72e-4e56-b3da-fe1235a6dd7a" ><span id="id-4344b4fd-a72e-4e56-b3da-fe1235a6dd7a"><img id="img-id-4344b4fd-a72e-4e56-b3da-fe1235a6dd7a" width="162" height="138"   src="assets/images/robbi.png"/></span>
+</span>
+
+</div>
+
+<aside class="notes">
+
+</aside>
+
+
+
+</section>
+<section id="slide_00029_frag_00001" data-state="slide_00029_frag_00001">
+
+
+<!-- Header -->
+  
+
+<!-- Background -->
+
+
+<!-- Slide -->
+<div class="jb-slide">
+
+<div class="jb-output-code jb-render">
+
+<!-- start embedded style -->
+
+<!-- end embedded style -->
+<div class="jb-output jb-render">
+
+<div style="text-align:center">
+<span id="id-ebd24de3-ca49-492e-80f5-c8a370cbc906" ><span id="id-ebd24de3-ca49-492e-80f5-c8a370cbc906">
+           <video id="vid-id-ebd24de3-ca49-492e-80f5-c8a370cbc906"   style="pointer-events:all;" controls>
+           <source src="assets/videos/eik.mp4"/>
+           </span>
+</span>
+
+</div>
+
+</div><!-- end of jb-output jb-render -->
+</div><!-- end of jb-output-code jb-render -->
+
+
+</div>
+<!-- Footer -->
+
+<div class="jb-footer-left">
+    <span id="id-df3cc178-2371-4a92-b726-eb0c58c93a88" ><span id="id-df3cc178-2371-4a92-b726-eb0c58c93a88"><img id="img-id-df3cc178-2371-4a92-b726-eb0c58c93a88"     src="assets/images/logo.png"/></span>
+</span>
+
+</div>
+<div class="jb-footer-right">
+    <span id="id-0a788313-e6f7-49a5-98c6-794f22d6d8a4" ><span id="id-0a788313-e6f7-49a5-98c6-794f22d6d8a4"><img id="img-id-0a788313-e6f7-49a5-98c6-794f22d6d8a4" width="162" height="138"   src="assets/images/robbi.png"/></span>
+</span>
+
+</div>
+
+<aside class="notes">
+
+</aside>
+
+
+
+</section>
+<section id="slide_00030_frag_00001" data-state="slide_00030_frag_00001">
+
+
+<!-- Header -->
+  
+
+<!-- Background -->
+
+
+<!-- Slide -->
+<div class="jb-slide">
+
+<div class="jb-output-code jb-render">
+
+<!-- start embedded style -->
+
+<!-- end embedded style -->
+<div class="jb-output jb-render">
+<div class="document" id="object-detection-using-yolo">
+<h1 class="title">Object Detection Using YOLO</h1>
+<div class="jb-text must detect position and color of balls in hint card docutils container">
+Reduce YOLO structure to run 60 times faster for inference</div>
+<span id="id-7efe44f5-4bcc-46eb-bffa-7cb773d98eb4" ><span id="id-7efe44f5-4bcc-46eb-bffa-7cb773d98eb4">
+           <video id="vid-id-7efe44f5-4bcc-46eb-bffa-7cb773d98eb4"   style="pointer-events:all;" controls>
+           <source src="assets/videos/yolo1.mp4"/>
+           </span>
+</span></div>
+
+</div><!-- end of jb-output jb-render -->
+</div><!-- end of jb-output-code jb-render -->
+
+
+</div>
+<!-- Footer -->
+
+<div class="jb-footer-left">
+    <span id="id-8edbf994-e300-4342-90d1-aaeef30d00e6" ><span id="id-8edbf994-e300-4342-90d1-aaeef30d00e6"><img id="img-id-8edbf994-e300-4342-90d1-aaeef30d00e6"     src="assets/images/logo.png"/></span>
+</span>
+
+</div>
+<div class="jb-footer-right">
+    <span id="id-8a07438f-52ff-4636-a026-82d0b5b0a75c" ><span id="id-8a07438f-52ff-4636-a026-82d0b5b0a75c"><img id="img-id-8a07438f-52ff-4636-a026-82d0b5b0a75c" width="162" height="138"   src="assets/images/robbi.png"/></span>
+</span>
+
+</div>
+
+<aside class="notes">
+
+</aside>
+
+
+
+</section>
+<section id="slide_00031_frag_00001" data-state="slide_00031_frag_00001">
+
+
+<!-- Header -->
+  
+
+<!-- Background -->
+
+
+<!-- Slide -->
+<div class="jb-slide">
+
+<div class="jb-output-code jb-render">
+
+<!-- start embedded style -->
+
+<!-- end embedded style -->
+<div class="jb-output jb-render">
+
+<h1>
+Industry and HuroCup 
+</h1>
+
+<div class="jb-text">
+<ul>
+<li>Skills transfer to many tasks in industry</li>
+<ul>
+<li>Weightlifting = move loads to workcell</li>
+
+<li>Spring = Logisitics/delivery</li>
+
+<li>Archery = High accuracy mobile manipulation</li>
+
+<li>Dr. Eureka = Planning and dexterous manipulation</li>
+</ul>
+</ul>
+</div>
+
+</div><!-- end of jb-output jb-render -->
+</div><!-- end of jb-output-code jb-render -->
+
+
+</div>
+<!-- Footer -->
+
+<div class="jb-footer-left">
+    <span id="id-3607ce58-516e-42c7-b1dd-f76a8b867dc3" ><span id="id-3607ce58-516e-42c7-b1dd-f76a8b867dc3"><img id="img-id-3607ce58-516e-42c7-b1dd-f76a8b867dc3"     src="assets/images/logo.png"/></span>
+</span>
+
+</div>
+<div class="jb-footer-right">
+    <span id="id-6fe2757d-774e-4520-a9f8-f5ff433ce96c" ><span id="id-6fe2757d-774e-4520-a9f8-f5ff433ce96c"><img id="img-id-6fe2757d-774e-4520-a9f8-f5ff433ce96c" width="162" height="138"   src="assets/images/robbi.png"/></span>
+</span>
+
+</div>
+
+<aside class="notes">
+
+</aside>
+
+
+
+</section>
+<section id="slide_00032_frag_00001" data-state="slide_00032_frag_00001">
+
+
+<!-- Header -->
+  
+
+<!-- Background -->
+
+
+<!-- Slide -->
+<div class="jb-slide">
+
+<div class="jb-output-code jb-render">
+
+<!-- start embedded style -->
+
+<!-- end embedded style -->
+<div class="jb-output jb-render">
+
+<h1>
+Conclusion
+</h1>
+
+<div class="jb-text">
+<ul>
+<li>Robot Sports competitions motivate and guide essential</li> 
+<ul>
+  <li>next generation industrial capabilities (Industry 5.0)</li>
+
+  <li>next societal developments (Society 5.0)</li>
+</ul>
+
+<li>Healthy Competition fosters development</li>
+
+  <li>Wonders of nature derive from Evolution (Competition for sexual reproduction)</li>
+  
+</div>
+
+</div><!-- end of jb-output jb-render -->
+</div><!-- end of jb-output-code jb-render -->
+
+
+</div>
+<!-- Footer -->
+
+<div class="jb-footer-left">
+    <span id="id-01475c99-c199-44a7-8233-8a1704cb091b" ><span id="id-01475c99-c199-44a7-8233-8a1704cb091b"><img id="img-id-01475c99-c199-44a7-8233-8a1704cb091b"     src="assets/images/logo.png"/></span>
+</span>
+
+</div>
+<div class="jb-footer-right">
+    <span id="id-2e16dc55-fd45-49a7-9a5e-1a8221c4cc69" ><span id="id-2e16dc55-fd45-49a7-9a5e-1a8221c4cc69"><img id="img-id-2e16dc55-fd45-49a7-9a5e-1a8221c4cc69" width="162" height="138"   src="assets/images/robbi.png"/></span>
+</span>
+
+</div>
+
+<aside class="notes">
+
+</aside>
+
+
+
+</section>
+        </div>
+        </div>
+
+        <script src="js/reveal.js"></script>
+
+        <script>
+            // More info about config & dependencies:
+            // - https://github.com/hakimel/reveal.js#configuration
+            // - https://github.com/hakimel/reveal.js#dependencies
+            Reveal.initialize({
+                math: {
+                    mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
+                    config: 'TeX-AMS_HTML-full',  // See http://docs.mathjax.org/en/latest/config-files.html
+                    // tex2jax: {
+                    //     inlineMath: [['$', '$'], ['\(', '\)']],
+                    //     displayMath: [['$$', '$$'], ['\[', '\]']],
+                    //     processEscapes: true,
+                    //     processEnvironments: true,
+                    //     skipTags: ['script', 'noscript', 'style', 'textarea', 'code', 'pre'],
+                    //     displayAlign: 'center',
+                    // }                
+                },
+                dependencies: [
+                    { src: 'plugin/markdown/marked.js' },
+                    { src: 'plugin/markdown/markdown.js' },
+                    { src: 'plugin/notes/notes.js', async: true },
+                    { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+                    { src: 'plugin/math/math.js', async: true }
+                ]
+            });
+        </script>
+
+        <script>
+            <!-- Assets -->
+var assets = {
+"robbi" : new JBImage( "robbi", "12677", "162", "138", "https://i.postimg.cc/K81kVbvQ/ntnuerc-logo-1.png", null, "assets/images/robbi", "png" ),
+"logo" : new JBImage( "logo", "12033", "0", "0", "https://i.postimg.cc/4xvjvdmq/ntnu-ee-logo.png", null, "assets/images/logo", "png" ),
+"fira-logo-1" : new JBImage( "fira-logo-1", "93836", "0", "0", null, null, "assets/images/FIRA-logo-1", "png" ),
+"pairLogo" : new JBImage( "pairLogo", "63051", "0", "0", "https://i.postimg.cc/V63MsGL3/logo-with-transparent-bg.png", null, "assets/images/pairLogo", "png" ),
+"darwinOP2img" : new JBImage( "darwinOP2img", "197271", "0", "0", "https://i.imgur.com/r6f2lN8.png", null, "assets/images/darwinOP2img", "png" ),
+"Robinionimg" : new JBImage( "Robinionimg", "199533", "0", "0", "https://i.imgur.com/cTeyUfr.png", null, "assets/images/Robinionimg", "png" ),
+"Robinionsimg" : new JBImage( "Robinionsimg", "281262", "0", "0", "https://i.imgur.com/zJ80pH4.png", null, "assets/images/Robinionsimg", "png" ),
+"Thormang3img" : new JBImage( "Thormang3img", "207191", "0", "0", "https://i.imgur.com/8X3sOmP.png", null, "assets/images/Thormang3img", "png" ),
+"weightlifting" : new JBImage( "weightlifting", "1961893", "0", "0", "https://i.imgur.com/EIzY6rq.png", null, "assets/images/weightlifting", "png" ),
+"shida_wl" : new JBVideo( "shida_wl", "24889329", "0", "0", "https://youtube.com/embed/jNVUw-5q-d4", null, "assets/videos/shida_wl" ),
+"sprint" : new JBImage( "sprint", "1503158", "0", "0", "https://i.imgur.com/JtCqK7r.png", null, "assets/images/sprint", "png" ),
+"sprint1" : new JBVideo( "sprint1", "5813954", "0", "0", "https://www.youtube.com/embed/8npFWGW-sa8", null, "assets/videos/sprint1" ),
+"unitedSoccer" : new JBImage( "unitedSoccer", "1323306", "0", "0", "https://i.imgur.com/QGwDgJM.png", null, "assets/images/unitedSoccer", "png" ),
+"spartanRace" : new JBImage( "spartanRace", "1265352", "0", "0", "https://i.imgur.com/GyC2Be3.png", null, "assets/images/spartanRace", "png" ),
+"liftAndCarry" : new JBImage( "liftAndCarry", "165836", "0", "0", "https://i.postimg.cc/SNTBD99c/image.png", null, "assets/images/liftAndCarry", "png" ),
+"wallClimbing" : new JBImage( "wallClimbing", "191997", "0", "0", "https://i.postimg.cc/QNSwd70v/image.png", null, "assets/images/wallClimbing", "png" ),
+"ropeClimb" : new JBImage( "ropeClimb", "174026", "0", "0", "https://i.postimg.cc/XJWRgsG2/69170961-746182075799896-9167220029563863040-n.jpg", null, "assets/images/ropeClimb", "jpg" ),
+"penaltyKick" : new JBImage( "penaltyKick", "1576892", "0", "0", "https://i.imgur.com/G5m0S6N.png", null, "assets/images/penaltyKick", "png" ),
+"obstacleRun" : new JBImage( "obstacleRun", "1368982", "0", "0", "https://i.imgur.com/jgTOoCT.png", null, "assets/images/obstacleRun", "png" ),
+"marathon" : new JBImage( "marathon", "2033152", "0", "0", "https://i.imgur.com/1DIxJgX.png", null, "assets/images/marathon", "png" ),
+"tripleJump" : new JBImage( "tripleJump", "1955367", "0", "0", "https://i.imgur.com/6DdwmEs.png", null, "assets/images/tripleJump", "png" ),
+"basketball" : new JBImage( "basketball", "2166129", "0", "0", "https://i.imgur.com/qXyDT7E.png", null, "assets/images/basketball", "png" ),
+"archery" : new JBImage( "archery", "1852974", "0", "0", "https://i.imgur.com/gvVgM2e.png", null, "assets/images/archery", "png" ),
+"hog1" : new JBImage( "hog1", "654270", "0", "0", "https://i.postimg.cc/HknSxPVy/image1.png", null, "assets/images/hog1", "png" ),
+"hog2" : new JBImage( "hog2", "8869", "0", "0", "https://i.postimg.cc/ydx6rKdN/image3.png", null, "assets/images/hog2", "png" ),
+"lm1" : new JBVideo( "lm1", "7572961", "0", "0", "https://www.youtube.com/embed/ZVEhVKSwf2s", null, "assets/videos/lm1" ),
+"eureka1" : new JBVideo( "eureka1", "49912772", "0", "0", "https://www.youtube.com/embed/fwRFdMLz8xI", null, "assets/videos/eureka1" ),
+"e1" : new JBImage( "e1", "127260", "0", "0", "https://i.postimg.cc/QdVjfCJ2/image.png", null, "assets/images/e1", "png" ),
+"e2" : new JBImage( "e2", "1261870", "0", "0", "https://i.postimg.cc/vBZhnRst/image.png", null, "assets/images/e2", "png" ),
+"eik" : new JBVideo( "eik", "43333501", "0", "0", "https://www.youtube.com/embed/XWSNiQHQsBI", null, "assets/videos/eik" ),
+"yolo1" : new JBVideo( "yolo1", "1388611", "0", "0", "https://www.youtube.com/embed/DW1V6qUtxL8", null, "assets/videos/yolo1" ) 
+};
+var assetInstances = {
+    "id-99941a83-32c0-4e89-866d-8b1e60593f8d": assets["robbi"],
+    "id-38758b47-c8a7-4f7c-9623-524f05077dac": assets["robbi"],
+    "id-4454e464-4b14-4832-956b-8aa04a785725": assets["robbi"],
+    "id-93017422-ae20-41ac-a78e-0ade7e347af5": assets["robbi"],
+    "id-ab3fe8a3-a148-45bc-a1dd-3821a3666258": assets["robbi"],
+    "id-bf08ffda-6d45-47fc-bd82-056e3ab3b892": assets["robbi"],
+    "id-17893616-5317-4b0c-821f-d87160486e95": assets["robbi"],
+    "id-e18e81bc-d505-428e-9eb4-2301b9b0aede": assets["robbi"],
+    "id-34f00221-dde8-4f71-8bbe-0a1c093823c1": assets["robbi"],
+    "id-175aa52a-c17a-4e0c-953a-c505287c116d": assets["robbi"],
+    "id-aec501ff-3432-437b-9d16-913eb25534a0": assets["robbi"],
+    "id-3a68a576-e28c-46df-9a2b-d3e26247e867": assets["robbi"],
+    "id-4fbc3bb8-c4c3-43cb-a633-04c2451882b3": assets["robbi"],
+    "id-d724bc0e-8c63-4f45-8194-157423a4fa2b": assets["robbi"],
+    "id-7faf5f68-630f-42ee-bb88-3fe8f08bfb12": assets["robbi"],
+    "id-bc2d0539-35c4-4a57-a725-c527fc02f2a0": assets["robbi"],
+    "id-260d813c-058f-411d-95aa-8ce55883b5da": assets["robbi"],
+    "id-e1cb91cc-01c8-4141-9934-71645411cc61": assets["robbi"],
+    "id-8a8f3902-cd90-469c-bc7f-c41651d3fbfc": assets["robbi"],
+    "id-739dba73-f648-426c-847e-0006c2d2da39": assets["robbi"],
+    "id-193f9a11-7b87-422d-92eb-c1c45e7bc5dd": assets["robbi"],
+    "id-3af21a73-734b-40c8-9fdb-d05f5a1fb779": assets["robbi"],
+    "id-6119d411-afce-4cbb-80b7-667b3e2b9709": assets["robbi"],
+    "id-795c14f1-3fed-4001-a272-b25936b97105": assets["robbi"],
+    "id-9d2c7020-42ae-46ac-92d7-74273997713c": assets["robbi"],
+    "id-26575ae2-c390-4000-a751-a1ecfb989990": assets["robbi"],
+    "id-4344b4fd-a72e-4e56-b3da-fe1235a6dd7a": assets["robbi"],
+    "id-0a788313-e6f7-49a5-98c6-794f22d6d8a4": assets["robbi"],
+    "id-8a07438f-52ff-4636-a026-82d0b5b0a75c": assets["robbi"],
+    "id-6fe2757d-774e-4520-a9f8-f5ff433ce96c": assets["robbi"],
+    "id-2e16dc55-fd45-49a7-9a5e-1a8221c4cc69": assets["robbi"],
+    "id-e04b4720-01bf-46fa-9023-c2463f2ea8e2": assets["logo"],
+    "id-eca5115d-311d-433a-b537-8508e032c63c": assets["logo"],
+    "id-bef26f0d-f8cc-4790-9793-d9bfe25ec871": assets["logo"],
+    "id-ec00f73b-9fa4-45eb-bd8e-4f1373ba3883": assets["logo"],
+    "id-2e3a353b-bf33-4fdc-826c-d3ce3f91fe16": assets["logo"],
+    "id-4246c5fe-ae52-475c-b7b7-1f95aac013fe": assets["logo"],
+    "id-4d6f1998-4497-431b-be69-618e83106d1f": assets["logo"],
+    "id-c6318704-f8a4-4813-abc4-ecf4315bfb85": assets["logo"],
+    "id-791b8e98-eec8-4df3-b140-c26dbab595d8": assets["logo"],
+    "id-66a6769b-98a2-4ca4-b555-e04fea63b13a": assets["logo"],
+    "id-b8af5e4e-29ee-45db-9756-24addffdf5cb": assets["logo"],
+    "id-3df57401-6151-4fc8-b683-2a75a2eca243": assets["logo"],
+    "id-e0580cb4-4fb0-430f-b6f3-b7ba093f8f8f": assets["logo"],
+    "id-77167091-8b52-4b3c-9d2b-972cc9da0776": assets["logo"],
+    "id-211240ee-77b7-4a47-a9a9-c1e7dd0e4276": assets["logo"],
+    "id-8eacbb2e-2308-4557-a73e-5796763d3ede": assets["logo"],
+    "id-f096966c-a6d0-44fc-a0c3-b259c47976a7": assets["logo"],
+    "id-7712f8b4-07db-41a8-bc7c-3e0b1ec0dcbf": assets["logo"],
+    "id-c65262c3-4b6f-494d-9ae5-b137923887b1": assets["logo"],
+    "id-a1d2bec4-95a8-491c-8f30-ac6b12d3d2a4": assets["logo"],
+    "id-492ec7f6-2861-4ffb-b24e-cbfb16fa22e8": assets["logo"],
+    "id-81676aad-8d31-4c92-87ea-7145f9564acd": assets["logo"],
+    "id-d3bbf9ba-1d40-4311-96bc-b4c7eda4ca4a": assets["logo"],
+    "id-fc408da8-e1e7-4bbe-a91b-e859bcfc7db9": assets["logo"],
+    "id-a44c3462-75a1-4651-af0c-d3ae26170234": assets["logo"],
+    "id-aded1e66-940f-47ed-8990-74644af3d534": assets["logo"],
+    "id-06713831-d29b-4741-9ce5-586f73349308": assets["logo"],
+    "id-df3cc178-2371-4a92-b726-eb0c58c93a88": assets["logo"],
+    "id-8edbf994-e300-4342-90d1-aaeef30d00e6": assets["logo"],
+    "id-3607ce58-516e-42c7-b1dd-f76a8b867dc3": assets["logo"],
+    "id-01475c99-c199-44a7-8233-8a1704cb091b": assets["logo"],
+    "id-21a8403d-82ba-4732-b685-c7fa0f3a583d": assets["darwinOP2img"],
+    "id-c74ef1e8-d7e6-4a1a-a058-adbd1e53d717": assets["Robinionimg"],
+    "id-89ccb0ae-5798-4be7-ab96-4b14bd0056d4": assets["Robinionsimg"],
+    "id-4742735f-3b20-47d4-94a7-90878660f097": assets["Thormang3img"],
+    "id-801823f5-11ad-43dd-9d03-06446d186840": assets["weightlifting"],
+    "id-b382dfa7-08a3-443d-9474-140b2b764779": assets["shida_wl"],
+    "id-70594676-af6c-4ddd-9ee6-19a0a6175c0a": assets["sprint"],
+    "id-a4440402-6754-4d34-a73d-8b32119b2167": assets["sprint1"],
+    "id-3476b693-4fb5-4b73-9467-902b3e20c48b": assets["unitedSoccer"],
+    "id-5074bda6-2ca5-45dd-90fd-09000c5b7593": assets["liftAndCarry"],
+    "id-d2cc7290-3053-4206-9e96-7e1fd2e3fce0": assets["wallClimbing"],
+    "id-7e373430-d620-44e6-93c8-0604e12bc6b7": assets["ropeClimb"],
+    "id-f7e6b82f-91bd-4c64-ac72-87ef5220fa2b": assets["penaltyKick"],
+    "id-871c42b6-2063-4b4f-bd57-efa22f07072e": assets["obstacleRun"],
+    "id-19dd41c0-7dd9-4926-98fb-9a75ba2faa94": assets["marathon"],
+    "id-308b6fd1-006d-410d-9b67-eb5cc687e41d": assets["tripleJump"],
+    "id-4ac7981d-2d4e-45a5-bbd1-1f645c3e79d7": assets["basketball"],
+    "id-c701adcc-1d42-4080-9ec9-68a6004c48e6": assets["archery"],
+    "id-056ffc51-f9c9-4fc5-b166-3062831f16a6": assets["hog1"],
+    "id-7053ce4b-ce01-4975-9c32-e2ea03cbf7c9": assets["hog2"],
+    "id-85960e1f-f2d9-4296-beec-4324950aeee1": assets["lm1"],
+    "id-76a7867e-c1a5-4191-b862-a7051f6f21a5": assets["eureka1"],
+    "id-2a50e4a0-6945-4836-a640-5975b326c7b2": assets["e1"],
+    "id-a1c0bfe2-a2ae-4567-8003-739ed9e52117": assets["e2"],
+    "id-ebd24de3-ca49-492e-80f5-c8a370cbc906": assets["eik"],
+    "id-7efe44f5-4bcc-46eb-bffa-7cb773d98eb4": assets["yolo1"]
+};
+<!-- End of Assets -->
+
+            convertURLs(assetInstances, "smart-path");
+        </script>
+        <script>
+            <!-- Characters -->
+var characters =
+{};
+<!-- End of Characters -->
+
+        </script>
+    </body>
+</html>
